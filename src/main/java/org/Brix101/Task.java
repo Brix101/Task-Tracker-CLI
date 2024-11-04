@@ -34,4 +34,8 @@ public class Task {
     public void setComplete(boolean complete) {
         isComplete = complete;
     }
+
+    public String toStringTask(){
+        return "{ \"name\": \"" + name + "\", \"description\": \"" + description + "\", \"isComplete\": " + isComplete + " }";
+    }
 }

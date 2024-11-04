@@ -1,12 +1,28 @@
 package org.Brix101;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        Task task = new Task("Task 1", "This is the first task", false);
-        System.out.println("Name: " + task.getName() + "\nDescription: " + task.getDescription() + "\nIs complete: " + task.isComplete());
+        TaskManager taskManager = new TaskManager();
 
-        TaskManager manager = new TaskManager();
+        taskManager.addTask(
+                new Task("Task 1", "This is the first task", false)
+        );
+        taskManager.addTask(
+                new Task("Task 2", "This is the first task", false)
+        );
+        taskManager.addTask(
+                new Task("Task 3", "This is the first task", false)
+        );
+        taskManager.addTask(
+                new Task("Task 4", "This is the first task", false)
+        );
+
+
+        for(Task task: taskManager.listTasks()){
+            System.out.println(task.toStringTask());
+        }
 
     }
 }
